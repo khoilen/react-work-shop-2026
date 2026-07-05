@@ -1,0 +1,9 @@
+{
+  "extends": "@react-workshop/tsconfig/base.json",
+  "files": [],
+  "references": [
+    { "path": "./apps/web" },
+    { "path": "./packages/http-client" },
+    { "path": "./packages/ui" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@react-workshop/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./base.json": "./base.json",
+    "./react-library.json": "./react-library.json",
+    "./vite-react.json": "./vite-react.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "react-work-shop-2026",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.6.3",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "storybook": "pnpm --filter @react-workshop/ui storybook",
+    "test": "turbo test"
+  },
+  "devDependencies": {
+    "@react-workshop/eslint-config": "workspace:*",
+    "eslint": "^9.30.0",
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}

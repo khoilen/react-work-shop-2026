@@ -1,0 +1,9 @@
+{
+  "extends": "@react-workshop/tsconfig/react-library.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "types": ["react", "react-dom"]
+  },
+  "include": ["src", ".storybook"],
+  "exclude": ["dist", "node_modules", "storybook-static"]
+}
