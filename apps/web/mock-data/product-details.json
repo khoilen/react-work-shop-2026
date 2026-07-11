@@ -1,0 +1,228 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "slug": "asgaard-sofa",
+      "name": "Asgaard Sofa",
+      "category": "sofa",
+      "price": 25000000,
+      "originalPrice": 28000000,
+      "sku": "SF-001",
+      "stockStatus": "In Stock",
+      "description": "Asgaard Sofa brings generous seating, soft texture, and a grounded silhouette suited for modern living rooms. The proportions are tuned for relaxed daily use while still presenting a refined showroom look.",
+      "gallery": [
+        "/images/product/product-01.png",
+        "/images/product/product-03.jpg",
+        "/images/product/product-08.png"
+      ],
+      "specs": {
+        "material": "Solid wood frame, premium fabric",
+        "color": "Warm beige",
+        "warranty": "1 year",
+        "assembly": "Minimal assembly required"
+      },
+      "dimensions": {
+        "width": 224,
+        "height": 87,
+        "depth": 98
+      },
+      "relatedIds": [3, 7, 8]
+    },
+    {
+      "id": 2,
+      "slug": "outdoor-sofa-set",
+      "name": "Outdoor Sofa Set",
+      "category": "outdoor",
+      "price": 32000000,
+      "originalPrice": 36500000,
+      "sku": "OD-002",
+      "stockStatus": "In Stock",
+      "description": "Outdoor Sofa Set is designed for open-air use with easy-clean surfaces and flexible seating modules, making it a strong centerpiece for patios and garden lounges.",
+      "gallery": [
+        "/images/product/product-02.png",
+        "/images/product/product-04.png",
+        "/images/product/product-05.png"
+      ],
+      "specs": {
+        "material": "Powder-coated metal, weather fabric",
+        "color": "Stone gray",
+        "warranty": "2 years",
+        "assembly": "Delivered in sections"
+      },
+      "dimensions": {
+        "width": 260,
+        "height": 82,
+        "depth": 145
+      },
+      "relatedIds": [4, 5, 6]
+    },
+    {
+      "id": 3,
+      "slug": "asgaard-sofa-side-view",
+      "name": "Asgaard Sofa Side View",
+      "category": "sofa",
+      "price": 25500000,
+      "originalPrice": 28500000,
+      "sku": "SF-003",
+      "stockStatus": "In Stock",
+      "description": "A side-profile presentation variant of the Asgaard line for visual comparison and alternate merchandising placements.",
+      "gallery": [
+        "/images/product/product-03.jpg",
+        "/images/product/product-01.png",
+        "/images/product/product-08.png"
+      ],
+      "specs": {
+        "material": "Solid wood frame, premium fabric",
+        "color": "Sand",
+        "warranty": "1 year",
+        "assembly": "Minimal assembly required"
+      },
+      "dimensions": {
+        "width": 224,
+        "height": 87,
+        "depth": 98
+      },
+      "relatedIds": [1, 7, 8]
+    },
+    {
+      "id": 4,
+      "slug": "cloud-ottoman-left",
+      "name": "Cloud Ottoman Left",
+      "category": "sofa",
+      "price": 18800000,
+      "originalPrice": 21000000,
+      "sku": "OT-004",
+      "stockStatus": "Low Stock",
+      "description": "Cloud Ottoman Left is a deep lounge module intended to pair with sectional seating or function as a standalone accent piece.",
+      "gallery": [
+        "/images/product/product-04.png",
+        "/images/product/product-05.png",
+        "/images/product/product-02.png"
+      ],
+      "specs": {
+        "material": "Wood frame, foam, fabric",
+        "color": "Cloud white",
+        "warranty": "1 year",
+        "assembly": "No assembly"
+      },
+      "dimensions": {
+        "width": 108,
+        "height": 43,
+        "depth": 92
+      },
+      "relatedIds": [2, 5, 6]
+    },
+    {
+      "id": 5,
+      "slug": "cloud-ottoman-right",
+      "name": "Cloud Ottoman Right",
+      "category": "sofa",
+      "price": 18800000,
+      "originalPrice": 21000000,
+      "sku": "OT-005",
+      "stockStatus": "Low Stock",
+      "description": "Cloud Ottoman Right complements modular arrangements with soft support and flexible placement.",
+      "gallery": [
+        "/images/product/product-05.png",
+        "/images/product/product-04.png",
+        "/images/product/product-02.png"
+      ],
+      "specs": {
+        "material": "Wood frame, foam, fabric",
+        "color": "Cloud white",
+        "warranty": "1 year",
+        "assembly": "No assembly"
+      },
+      "dimensions": {
+        "width": 108,
+        "height": 43,
+        "depth": 92
+      },
+      "relatedIds": [2, 4, 6]
+    },
+    {
+      "id": 6,
+      "slug": "maya-three-seater",
+      "name": "Maya Three Seater",
+      "category": "sofa",
+      "price": 22900000,
+      "originalPrice": 24900000,
+      "sku": "SF-006",
+      "stockStatus": "In Stock",
+      "description": "Maya Three Seater balances compact width with deep comfort, suitable for apartments and family seating areas alike.",
+      "gallery": [
+        "/images/product/product-06.png",
+        "/images/product/product-07.png",
+        "/images/product/product-08.png"
+      ],
+      "specs": {
+        "material": "Kiln-dried wood, textured upholstery",
+        "color": "Natural linen",
+        "warranty": "18 months",
+        "assembly": "Leg attachment required"
+      },
+      "dimensions": {
+        "width": 198,
+        "height": 86,
+        "depth": 94
+      },
+      "relatedIds": [4, 5, 7]
+    },
+    {
+      "id": 7,
+      "slug": "stuart-sofa",
+      "name": "Stuart Sofa",
+      "category": "sofa",
+      "price": 21400000,
+      "originalPrice": 23900000,
+      "sku": "SF-007",
+      "stockStatus": "In Stock",
+      "description": "Stuart Sofa focuses on clean geometry and compact-room friendliness, with a supportive seat and understated detailing.",
+      "gallery": [
+        "/images/product/product-07.png",
+        "/images/product/product-06.png",
+        "/images/product/product-01.png"
+      ],
+      "specs": {
+        "material": "Engineered wood, woven fabric",
+        "color": "Oatmeal",
+        "warranty": "1 year",
+        "assembly": "Leg attachment required"
+      },
+      "dimensions": {
+        "width": 186,
+        "height": 84,
+        "depth": 90
+      },
+      "relatedIds": [1, 3, 6]
+    },
+    {
+      "id": 8,
+      "slug": "asgaard-sofa-gallery",
+      "name": "Asgaard Sofa Gallery",
+      "category": "sofa",
+      "price": 25200000,
+      "originalPrice": 28200000,
+      "sku": "SF-008",
+      "stockStatus": "In Stock",
+      "description": "A lifestyle-focused merchandising variant for the Asgaard range that highlights texture, scale, and styling context.",
+      "gallery": [
+        "/images/product/product-08.png",
+        "/images/product/product-01.png",
+        "/images/product/product-03.jpg"
+      ],
+      "specs": {
+        "material": "Solid wood frame, premium fabric",
+        "color": "Warm beige",
+        "warranty": "1 year",
+        "assembly": "Minimal assembly required"
+      },
+      "dimensions": {
+        "width": 224,
+        "height": 87,
+        "depth": 98
+      },
+      "relatedIds": [1, 3, 7]
+    }
+  ]
+}

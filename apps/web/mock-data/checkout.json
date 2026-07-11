@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "orderId": "ORD-20260711-001",
+  "status": "confirmed",
+  "subtotal": 46400000,
+  "shipping": 0,
+  "tax": 0,
+  "discount": 0,
+  "total": 46400000
+}

@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "message": "Item removed",
+  "cart": {
+    "items": [
+      {
+        "id": "cart-1",
+        "productId": 1,
+        "slug": "asgaard-sofa",
+        "name": "Asgaard Sofa",
+        "image": "/images/product/product-01.png",
+        "price": 25000000,
+        "quantity": 1,
+        "subtotal": 25000000
+      }
+    ],
+    "subtotal": 25000000,
+    "shipping": 0,
+    "tax": 0,
+    "discount": 0,
+    "total": 25000000
+  }
+}

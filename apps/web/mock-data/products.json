@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "slug": "asgaard-sofa",
+      "name": "Asgaard Sofa",
+      "category": "sofa",
+      "price": 25000000,
+      "originalPrice": 28000000,
+      "thumbnail": "/images/product/product-01.png",
+      "badge": "New",
+      "rating": 4.8,
+      "shortDescription": "Modern upholstered sofa for warm, minimal interiors.",
+      "tags": ["featured", "sofa", "living-room"]
+    },
+    {
+      "id": 2,
+      "slug": "outdoor-sofa-set",
+      "name": "Outdoor Sofa Set",
+      "category": "outdoor",
+      "price": 32000000,
+      "originalPrice": 36500000,
+      "thumbnail": "/images/product/product-02.png",
+      "badge": "Sale",
+      "rating": 4.7,
+      "shortDescription": "Weather-ready modular seating for patios and terraces.",
+      "tags": ["featured", "outdoor", "garden"]
+    },
+    {
+      "id": 3,
+      "slug": "asgaard-sofa-side-view",
+      "name": "Asgaard Sofa Side View",
+      "category": "sofa",
+      "price": 25500000,
+      "originalPrice": 28500000,
+      "thumbnail": "/images/product/product-03.jpg",
+      "badge": "Popular",
+      "rating": 4.6,
+      "shortDescription": "Alternate layout-ready sofa visual for product comparison.",
+      "tags": ["sofa", "compare", "living-room"]
+    },
+    {
+      "id": 4,
+      "slug": "cloud-ottoman-left",
+      "name": "Cloud Ottoman Left",
+      "category": "sofa",
+      "price": 18800000,
+      "originalPrice": 21000000,
+      "thumbnail": "/images/product/product-04.png",
+      "badge": "New",
+      "rating": 4.5,
+      "shortDescription": "Soft modular ottoman section with lounge-depth comfort.",
+      "tags": ["modular", "ottoman", "featured"]
+    },
+    {
+      "id": 5,
+      "slug": "cloud-ottoman-right",
+      "name": "Cloud Ottoman Right",
+      "category": "sofa",
+      "price": 18800000,
+      "originalPrice": 21000000,
+      "thumbnail": "/images/product/product-05.png",
+      "badge": "New",
+      "rating": 4.5,
+      "shortDescription": "Right-side ottoman companion for flexible sectional layouts.",
+      "tags": ["modular", "ottoman", "living-room"]
+    },
+    {
+      "id": 6,
+      "slug": "maya-three-seater",
+      "name": "Maya Three Seater",
+      "category": "sofa",
+      "price": 22900000,
+      "originalPrice": 24900000,
+      "thumbnail": "/images/product/product-06.png",
+      "badge": "Trending",
+      "rating": 4.6,
+      "shortDescription": "Balanced proportions and deep cushions for everyday comfort.",
+      "tags": ["sofa", "three-seater", "trend"]
+    },
+    {
+      "id": 7,
+      "slug": "stuart-sofa",
+      "name": "Stuart Sofa",
+      "category": "sofa",
+      "price": 21400000,
+      "originalPrice": 23900000,
+      "thumbnail": "/images/product/product-07.png",
+      "badge": "Popular",
+      "rating": 4.4,
+      "shortDescription": "Structured silhouette with soft detailing for compact rooms.",
+      "tags": ["sofa", "compact", "best-seller"]
+    },
+    {
+      "id": 8,
+      "slug": "asgaard-sofa-gallery",
+      "name": "Asgaard Sofa Gallery",
+      "category": "sofa",
+      "price": 25200000,
+      "originalPrice": 28200000,
+      "thumbnail": "/images/product/product-08.png",
+      "badge": "Featured",
+      "rating": 4.7,
+      "shortDescription": "Detail-rich lifestyle view for PDP gallery and cart previews.",
+      "tags": ["sofa", "gallery", "featured"]
+    }
+  ],
+  "total": 8
+}

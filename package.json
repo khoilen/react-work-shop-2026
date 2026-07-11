@@ -13,15 +13,20 @@
     "lint": "turbo lint",
     "typecheck": "turbo typecheck",
     "storybook": "pnpm --filter @react-workshop/ui storybook",
-    "test": "turbo test"
+    "test": "turbo test",
+    "figma:assets": "node scripts/download-figma-assets.mjs",
+    "figma:regroup": "node scripts/regroup-figma-assets.mjs",
+    "mock:generate": "node scripts/generate-dummyjson-mocks.mjs"
   },
   "devDependencies": {
     "@react-workshop/eslint-config": "workspace:*",
-    "eslint": "^9.30.0",
-    "turbo": "^2.5.0",
-    "typescript": "^5.8.0"
+    "eslint": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

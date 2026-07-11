@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "message": "Cart updated",
+  "cart": {
+    "items": [
+      {
+        "id": "cart-1",
+        "productId": 1,
+        "slug": "asgaard-sofa",
+        "name": "Asgaard Sofa",
+        "image": "/images/product/product-01.png",
+        "price": 25000000,
+        "quantity": 2,
+        "subtotal": 50000000
+      },
+      {
+        "id": "cart-2",
+        "productId": 7,
+        "slug": "stuart-sofa",
+        "name": "Stuart Sofa",
+        "image": "/images/product/product-07.png",
+        "price": 21400000,
+        "quantity": 1,
+        "subtotal": 21400000
+      }
+    ],
+    "subtotal": 71400000,
+    "shipping": 0,
+    "tax": 0,
+    "discount": 0,
+    "total": 71400000
+  }
+}

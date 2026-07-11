@@ -1,0 +1,45 @@
+{
+  "productIds": [1, 2],
+  "items": [
+    {
+      "id": 1,
+      "slug": "asgaard-sofa",
+      "name": "Asgaard Sofa",
+      "image": "/images/product/product-01.png",
+      "price": 25000000
+    },
+    {
+      "id": 2,
+      "slug": "outdoor-sofa-set",
+      "name": "Outdoor Sofa Set",
+      "image": "/images/product/product-02.png",
+      "price": 32000000
+    }
+  ],
+  "comparisonRows": [
+    {
+      "label": "Material",
+      "values": ["Solid wood frame, premium fabric", "Powder-coated metal, weather fabric"]
+    },
+    {
+      "label": "Color",
+      "values": ["Warm beige", "Stone gray"]
+    },
+    {
+      "label": "Warranty",
+      "values": ["1 year", "2 years"]
+    },
+    {
+      "label": "Width",
+      "values": ["224 cm", "260 cm"]
+    },
+    {
+      "label": "Depth",
+      "values": ["98 cm", "145 cm"]
+    },
+    {
+      "label": "Best for",
+      "values": ["Indoor living rooms", "Outdoor lounge areas"]
+    }
+  ]
+}
