@@ -51,7 +51,7 @@ pnpm dev
   "productDetails": {
     "method": "GET",
     "file": "product-details.json",
-    "url": "https://dummyjson.com/c/6b5f-5f22-4e82-8b8b",
+    "url": "https://dummyjson.com/c/feb3-066a-4263-88a8",
     "expiresOn": null
   },
   "categories": {

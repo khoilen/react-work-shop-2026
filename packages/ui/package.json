@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "files": ["dist", "src/styles.css"],
+  "files": [
+    "dist",
+    "src/styles.css"
+  ],
   "scripts": {
-    "build": "tsup src/button/button.tsx src/card/card.tsx src/input/input.tsx --format esm --dts --external react --external react/jsx-runtime --clean",
-    "dev": "tsup src/button/button.tsx src/card/card.tsx src/input/input.tsx --format esm --dts --external react --external react/jsx-runtime --watch",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
