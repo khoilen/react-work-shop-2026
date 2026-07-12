@@ -43,12 +43,12 @@ Participants should be familiar with:
 
 # Workshop Agenda
 
-| Time | Topic |
-|------|-------|
-| 0–10 min | Modern React Ecosystem |
-| 10–15 min | Recommended Project Structure |
+| Time      | Topic                               |
+| --------- | ----------------------------------- |
+| 0–10 min  | Modern React Ecosystem              |
+| 10–15 min | Recommended Project Structure       |
 | 15–55 min | Common React Mistakes (Live Coding) |
-| 55–60 min | Summary & Q&A |
+| 55–60 min | Summary & Q&A                       |
 
 ---
 
@@ -64,17 +64,17 @@ We'll briefly introduce the most commonly used libraries and discuss:
 - When to use them
 - Common alternatives
 
-| Category | Popular Libraries |
-|----------|-------------------|
-| Build Tool | Vite |
-| Routing | React Router |
-| Server State | TanStack Query |
-| Client State | Zustand |
-| Forms | React Hook Form |
-| Validation | Zod |
-| Styling | Tailwind CSS |
-| UI Components | shadcn/ui, MUI |
-| Testing | Vitest, React Testing Library |
+| Category      | Popular Libraries             |
+| ------------- | ----------------------------- |
+| Build Tool    | Vite                          |
+| Routing       | React Router                  |
+| Server State  | TanStack Query                |
+| Client State  | Zustand                       |
+| Forms         | React Hook Form               |
+| Validation    | Zod                           |
+| Styling       | Tailwind CSS                  |
+| UI Components | shadcn/ui, MUI                |
+| Testing       | Vitest, React Testing Library |
 
 ---
 
@@ -91,17 +91,127 @@ Topics include:
 - Folder organization
 - Separation of concerns
 
+The goal is not to create many folders from the beginning.
+
+The goal is to make code easy to find, easy to change, and hard to accidentally break.
+
+Recommended structure:
+
+```txt
+src/
+|-- app/
+|   |-- app.tsx
+|   |-- router.tsx
+|   |-- providers.tsx
+|   `-- config.ts
+|-- components/
+|   |-- ui/
+|   `-- layout/
+|-- features/
+|   |-- products/
+|   |   |-- api/
+|   |   |-- components/
+|   |   |-- hooks/
+|   |   |-- schemas/
+|   |   |-- types.ts
+|   |   `-- index.ts
+|   `-- cart/
+|       |-- api/
+|       |-- components/
+|       |-- hooks/
+|       |-- store.ts
+|       |-- types.ts
+|       `-- index.ts
+|-- hooks/
+|-- lib/
+|-- services/
+|-- stores/
+|-- styles/
+|-- types/
+|-- utils/
+`-- main.tsx
+```
+
+## What each folder is for
+
+| Folder        | Purpose                                                          | Example content                                     |
+| ------------- | ---------------------------------------------------------------- | --------------------------------------------------- |
+| `app/`        | Application setup and wiring                                     | router, providers, app-level config                 |
+| `components/` | Shared UI that is not tied to one business feature               | buttons, inputs, modal, header, sidebar             |
+| `features/`   | Business modules grouped by domain                               | products, cart, checkout, authentication            |
+| `hooks/`      | Reusable hooks shared across multiple features                   | `useDebounce`, `useMediaQuery`, `useLocalStorage`   |
+| `lib/`        | Third-party library setup and small wrappers                     | query client, date formatter, analytics client      |
+| `services/`   | Cross-feature services and external integrations                 | HTTP client, storage service, notification service  |
+| `stores/`     | Global client state used by multiple features                    | theme store, user preferences, auth session         |
+| `styles/`     | Global styles, CSS variables, and framework entry files          | Tailwind entry file, reset styles, design tokens    |
+| `types/`      | Shared TypeScript types used across the application              | API response types, common pagination types         |
+| `utils/`      | Pure helper functions with no React or browser-specific behavior | currency formatter, string helpers, sorting helpers |
+
+## Feature folder pattern
+
+A feature should contain the code needed to support one business area.
+
 Example:
 
-src/
-├── components/
-├── features/
-├── hooks/
-├── api/
-├── stores/
-├── router/
-├── utils/
-└── types/
+```txt
+features/products/
+|-- api/
+|   |-- get-products.ts
+|   `-- get-product-detail.ts
+|-- components/
+|   |-- product-card.tsx
+|   |-- product-grid.tsx
+|   `-- product-filter.tsx
+|-- hooks/
+|   |-- use-products.ts
+|   `-- use-product-detail.ts
+|-- schemas/
+|   `-- product-filter.schema.ts
+|-- types.ts
+`-- index.ts
+```
+
+This keeps product-related API calls, UI, hooks, validation, and types close together.
+
+When a developer needs to change the product page, they know where to start.
+
+## What should be shared?
+
+Move code to a shared folder only when it is reused by more than one feature.
+
+Good shared code:
+
+- Generic UI components such as `Button`, `Input`, `Card`, and `Modal`
+- Reusable hooks such as `useDebounce` or `useClickOutside`
+- Pure utilities such as `formatCurrency` or `sortByDate`
+- Application setup such as router, providers, and query client configuration
+
+Keep code inside a feature when it only belongs to that feature.
+
+Examples:
+
+- `ProductCard` should stay in `features/products/components/`
+- `CartSummary` should stay in `features/cart/components/`
+- `CheckoutFormSchema` should stay in `features/checkout/schemas/`
+
+## Common structure mistakes
+
+- Creating too many folders before the app needs them
+- Placing all components in one large `components/` folder
+- Putting business logic inside page components
+- Sharing code too early before there is real reuse
+- Mixing API calls, validation, state, and UI in one file
+- Using global state for data that only one feature needs
+
+## Practical rules
+
+- Start simple, then split when files become difficult to maintain.
+- Organize business code by feature, not by file type only.
+- Keep shared folders small and truly reusable.
+- Keep page components focused on composition.
+- Keep API logic out of UI components.
+- Keep types close to the feature unless they are used across the app.
+- Prefer clear folder names over clever abstractions.
 
 ---
 
@@ -255,10 +365,10 @@ Official documentation
 This repository contains:
 
 /demos
-    /01-server-state
-    /02-client-state
-    /03-forms
-    /04-component-architecture
+/01-server-state
+/02-client-state
+/03-forms
+/04-component-architecture
 
 /slides
 
