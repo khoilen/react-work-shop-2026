@@ -161,21 +161,7 @@ Examples:
 
 ## Common React Mistakes
 
-Instead of learning APIs, we'll learn by fixing real-world mistakes.
-
-Each demo follows the same format:
-
-1. The problem
-2. Why it happens
-3. Why it's bad
-4. Modern solution
-5. Best practice
-
----
-
 ## Mistake 1 — Managing Server State Manually
-
-### Problem
 
 Using useEffect + fetch for every API request.
 
@@ -199,8 +185,6 @@ Server State should not be managed like local component state.
 
 ## Mistake 2 — Using the Wrong State Management
 
-### Problem
-
 Using Context or global state for everything.
 
 Topics
@@ -221,8 +205,6 @@ Not every state belongs in a global store.
 ---
 
 ## Mistake 3 — Complex Forms with useState
-
-### Problem
 
 Managing every input with useState.
 
@@ -245,8 +227,6 @@ Forms become easier to build and maintain with dedicated tools.
 ---
 
 ## Mistake 4 — Components Doing Too Much
-
-### Problem
 
 One component handles:
 
@@ -271,6 +251,31 @@ Key takeaway
 Each module should have a single responsibility.
 
 ---
+
+## Mistake 5: Project without linting and typecheck, unittest
+
+The project runs, so developers assume it's ready to ship.
+
+Without linting and type checking, simple mistakes can reach production.
+
+Examples:
+
+- Missing useEffect dependencies
+- Unused variables and dead code
+- Incorrect prop types
+- Type errors causing runtime crashes
+
+Run these checks before every commit or in CI:
+
+``
+pnpm typecheck
+pnpm lint
+pnpm test
+pnpm build
+
+``
+
+## Mistake 6
 
 ### Best Practices
 
