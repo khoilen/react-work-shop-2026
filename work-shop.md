@@ -1,12 +1,10 @@
-# React in Practice 2026
+# Work React 2026
 
 > Building modern React applications with the right architecture, tools, and best practices.
 
----
+## About
 
-# About
-
-## What you'll learn
+### What you'll learn
 
 Modern React development is much more than writing components.
 
@@ -18,41 +16,14 @@ In this workshop, we'll explore:
 - Common mistakes developers make
 - How to avoid those mistakes using modern tools and practices
 
----
-
-## Who is this workshop for?
-
-- Junior developers learning React
-- Mid-level developers building production applications
-- Senior developers interested in modern React practices
-
----
-
-## Prerequisites
+### Prerequisites
 
 Participants should be familiar with:
 
 - JavaScript (ES6+)
 - React fundamentals
-- Functional components
-- useState
-- useEffect
-- npm
 
----
-
-# Workshop Agenda
-
-| Time      | Topic                               |
-| --------- | ----------------------------------- |
-| 0–10 min  | Modern React Ecosystem              |
-| 10–15 min | Recommended Project Structure       |
-| 15–55 min | Common React Mistakes (Live Coding) |
-| 55–60 min | Summary & Q&A                       |
-
----
-
-# Modern React Ecosystem
+### Modern React Ecosystem
 
 React focuses on building user interfaces.
 
@@ -76,9 +47,7 @@ We'll briefly introduce the most commonly used libraries and discuss:
 | UI Components | shadcn/ui, MUI                |
 | Testing       | Vitest, React Testing Library |
 
----
-
-# Recommended Project Structure
+### Recommended Project Structure
 
 We'll discuss how to organize React applications as they grow.
 
@@ -132,7 +101,7 @@ src/
 `-- main.tsx
 ```
 
-## What each folder is for
+#### What each folder is for
 
 | Folder        | Purpose                                                          | Example content                                     |
 | ------------- | ---------------------------------------------------------------- | --------------------------------------------------- |
@@ -147,7 +116,7 @@ src/
 | `types/`      | Shared TypeScript types used across the application              | API response types, common pagination types         |
 | `utils/`      | Pure helper functions with no React or browser-specific behavior | currency formatter, string helpers, sorting helpers |
 
-## Feature folder pattern
+#### Feature folder pattern
 
 A feature should contain the code needed to support one business area.
 
@@ -167,8 +136,6 @@ features/products/
 |   `-- use-product-detail.ts
 |-- schemas/
 |   `-- product-filter.schema.ts
-|-- types.ts
-`-- index.ts
 ```
 
 This keeps product-related API calls, UI, hooks, validation, and types close together.
@@ -185,6 +152,7 @@ Good shared code:
 - Reusable hooks such as `useDebounce` or `useClickOutside`
 - Pure utilities such as `formatCurrency` or `sortByDate`
 - Application setup such as router, providers, and query client configuration
+- Business ui logic  that is reused across multiple features
 
 Keep code inside a feature when it only belongs to that feature.
 
@@ -194,28 +162,7 @@ Examples:
 - `CartSummary` should stay in `features/cart/components/`
 - `CheckoutFormSchema` should stay in `features/checkout/schemas/`
 
-## Common structure mistakes
-
-- Creating too many folders before the app needs them
-- Placing all components in one large `components/` folder
-- Putting business logic inside page components
-- Sharing code too early before there is real reuse
-- Mixing API calls, validation, state, and UI in one file
-- Using global state for data that only one feature needs
-
-## Practical rules
-
-- Start simple, then split when files become difficult to maintain.
-- Organize business code by feature, not by file type only.
-- Keep shared folders small and truly reusable.
-- Keep page components focused on composition.
-- Keep API logic out of UI components.
-- Keep types close to the feature unless they are used across the app.
-- Prefer clear folder names over clever abstractions.
-
----
-
-# Common React Mistakes
+## Common React Mistakes
 
 Instead of learning APIs, we'll learn by fixing real-world mistakes.
 
@@ -328,7 +275,7 @@ Each module should have a single responsibility.
 
 ---
 
-# Best Practices
+### Best Practices
 
 We'll conclude with several practical guidelines that apply to almost every React project.
 
@@ -343,53 +290,3 @@ Topics include:
 - Keep components focused and reusable
 
 ---
-
-# Resources
-
-Official documentation
-
-- React
-- Vite
-- React Router
-- TanStack Query
-- Zustand
-- React Hook Form
-- Zod
-- Tailwind CSS
-- React Testing Library
-
----
-
-# Repository Structure
-
-This repository contains:
-
-/demos
-/01-server-state
-/02-client-state
-/03-forms
-/04-component-architecture
-
-/slides
-
-/assets
-
-/solutions
-
----
-
-# After the Workshop
-
-After completing this workshop, participants should be able to:
-
-✓ Understand the modern React ecosystem
-
-✓ Know when to use popular React libraries
-
-✓ Structure medium-to-large React applications
-
-✓ Recognize common React mistakes
-
-✓ Apply production-ready best practices
-
-✓ Build React applications with greater confidence
