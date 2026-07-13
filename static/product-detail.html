@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asgaard Sofa - Furniro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#000000",
+              muted: "#9f9f9f",
+              product: "#f4f5f7",
+              beige: "#f9f1e7",
+              brand: "#b88e2f",
+              danger: "#e97171",
+              teal: "#2ec1ac",
+            },
+            fontFamily: { sans: ["Poppins", "Arial", "sans-serif"] },
+            boxShadow: { card: "0 12px 30px rgba(0,0,0,.08)" },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white font-sans text-ink">
+    <header class="bg-white">
+      <nav
+        class="mx-auto flex min-h-[100px] w-[min(1240px,calc(100%-32px))] items-center justify-between gap-6"
+      >
+        <a
+          class="flex items-center gap-3 text-[34px] font-bold tracking-tight"
+          href="index.html"
+          ><img
+            class="h-8 w-8"
+            src="images/common/common-01.png"
+            alt=""
+          />Furniro</a
+        >
+        <div
+          class="hidden items-center gap-[75px] text-base font-medium md:flex"
+        >
+          <a class="" href="index.html">Home</a>
+          <a class="text-brand" href="shop.html">Shop</a>
+          <a class="" href="about.html">About</a>
+          <a class="" href="contact.html">Contact</a>
+        </div>
+        <div class="flex items-center gap-4 text-xl font-semibold sm:gap-8">
+          <button class="grid h-10 w-10 place-items-center text-black hover:text-brand" type="button" aria-label="Account"><svg aria-hidden="true" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg></button>
+          <button class="grid h-10 w-10 place-items-center text-black hover:text-brand" type="button" aria-label="Search"><svg aria-hidden="true" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+          <button class="grid h-10 w-10 place-items-center text-black hover:text-brand" type="button" aria-label="Wishlist"><svg aria-hidden="true" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
+          <a class="grid h-10 w-10 place-items-center text-black hover:text-brand" href="cart.html" aria-label="Cart"><svg aria-hidden="true" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h15l-2 9H8L6 8Z"/><path d="M6 8 5 4H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="bg-beige py-8">
+        <div
+          class="mx-auto flex w-[min(1240px,calc(100%-32px))] flex-wrap items-center gap-6 text-muted"
+        >
+          <a href="index.html">Home</a><span>&gt;</span
+          ><a href="shop.html">Shop</a><span>&gt;</span
+          ><span class="h-9 w-px bg-muted"></span
+          ><span class="text-black">Asgaard sofa</span>
+        </div>
+      </section>
+      <section class="py-9">
+        <div
+          class="mx-auto grid w-[min(1240px,calc(100%-32px))] gap-20 lg:grid-cols-[553px_1fr]"
+        >
+          <div class="grid gap-8 sm:grid-cols-[76px_1fr]">
+            <div class="grid grid-cols-4 gap-8 sm:grid-cols-1">
+              <img
+                class="h-20 w-20 rounded-[10px] bg-beige object-cover"
+                src="images/product/product-01.png"
+              /><img
+                class="h-20 w-20 rounded-[10px] bg-beige object-cover"
+                src="images/product/product-02.png"
+              /><img
+                class="h-20 w-20 rounded-[10px] bg-beige object-cover"
+                src="images/product/product-03.jpg"
+              /><img
+                class="h-20 w-20 rounded-[10px] bg-beige object-cover"
+                src="images/product/product-04.png"
+              />
+            </div>
+            <div
+              class="grid min-h-[500px] place-items-center rounded-[10px] bg-beige p-8"
+            >
+              <img
+                class="max-h-[430px] w-full object-contain"
+                src="images/product/product-01.png"
+                alt="Asgaard sofa"
+              />
+            </div>
+          </div>
+          <div>
+            <h1 class="text-[42px] font-normal">Asgaard sofa</h1>
+            <p class="mt-2 text-2xl font-medium text-muted">Rs. 250,000.00</p>
+            <div class="mt-4 flex items-center gap-5">
+              <span class="text-xl text-[#ffc700]">5.0/5</span
+              ><span class="h-8 w-px bg-muted"></span
+              ><span class="text-sm text-muted">5 Customer Review</span>
+            </div>
+            <p class="mt-5 max-w-[424px] text-sm leading-6">
+              Setting the bar as one of the loudest speakers in its class, the
+              Kilburn is a compact, stout-hearted hero with a well-balanced
+              audio.
+            </p>
+            <div class="mt-6">
+              <p class="mb-3 text-sm text-muted">Size</p>
+              <div class="flex gap-4">
+                <button class="h-[30px] w-[30px] rounded bg-brand text-white">
+                  L</button
+                ><button class="h-[30px] w-[30px] rounded bg-beige">XL</button
+                ><button class="h-[30px] w-[30px] rounded bg-beige">XS</button>
+              </div>
+            </div>
+            <div class="mt-5">
+              <p class="mb-3 text-sm text-muted">Color</p>
+              <div class="flex gap-4">
+                <span class="h-[30px] w-[30px] rounded-full bg-[#816dfa]"></span
+                ><span class="h-[30px] w-[30px] rounded-full bg-black"></span
+                ><span class="h-[30px] w-[30px] rounded-full bg-brand"></span>
+              </div>
+            </div>
+            <div
+              class="mt-8 flex flex-wrap gap-5 border-b border-[#d9d9d9] pb-14"
+            >
+              <div
+                class="flex h-16 items-center rounded-[10px] border border-muted"
+              >
+                <button class="px-4">-</button><span class="px-5">1</span
+                ><button class="px-4">+</button>
+              </div>
+              <a
+                class="inline-flex h-16 items-center rounded-[15px] border border-black px-12 text-xl"
+                href="cart.html"
+                >Add To Cart</a
+              ><a
+                class="inline-flex h-16 items-center rounded-[15px] border border-black px-12 text-xl"
+                href="shop.html"
+                >+ Compare</a
+              >
+            </div>
+            <div class="mt-10 grid gap-3 text-muted">
+              <p>SKU : SS001</p>
+              <p>Category : Sofas</p>
+              <p>Tags : Sofa, Chair, Home, Shop</p>
+              <p>Share : FB IN TW</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="border-y border-[#d9d9d9] py-12">
+        <div class="mx-auto w-[min(1026px,calc(100%-32px))]">
+          <div class="mb-9 flex flex-wrap justify-center gap-14 text-2xl">
+            <span class="font-medium">Description</span
+            ><span class="text-muted">Additional Information</span
+            ><span class="text-muted">Reviews [5]</span>
+          </div>
+          <p class="mb-7 text-justify text-muted">
+            Embodying the raw, wayward spirit of rock and roll, this product
+            takes the unmistakable look and sound of classic design, unplugs the
+            chords, and takes the show on the road.
+          </p>
+          <div class="grid gap-7 md:grid-cols-2">
+            <img
+              class="h-[348px] w-full rounded-[10px] bg-beige object-cover"
+              src="images/home/home-01.png"
+            /><img
+              class="h-[348px] w-full rounded-[10px] bg-beige object-cover"
+              src="images/home/home-03.png"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="py-14">
+        <div class="mx-auto w-[min(1236px,calc(100%-32px))]">
+          <h2 class="mb-7 text-center text-4xl font-medium">
+            Related Products
+          </h2>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="group relative overflow-hidden bg-product">
+              <a href="product-detail.html"
+                ><img
+                  class="h-[301px] w-full object-cover"
+                  src="images/product/product-01.png"
+                  alt="Syltherine" /></a
+              ><span
+                class="absolute right-6 top-6 grid h-12 w-12 place-items-center rounded-full bg-danger text-white"
+                >-30%</span
+              >
+              <div class="p-4">
+                <h3 class="text-2xl font-semibold text-[#3a3a3a]">
+                  Syltherine
+                </h3>
+                <p class="mt-2 font-medium text-[#898989]">
+                  Stylish cafe chair
+                </p>
+                <div class="mt-2 flex items-center gap-4">
+                  <strong class="text-xl font-semibold text-[#3a3a3a]"
+                    >Rp 2.500.000</strong
+                  ><span class="text-[#b0b0b0] line-through">Rp 3.500.000</span>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 hidden place-items-center bg-[#3a3a3a]/70 group-hover:grid"
+              >
+                <div class="grid justify-items-center gap-6">
+                  <a
+                    class="bg-white px-14 py-3 font-semibold text-brand"
+                    href="cart.html"
+                    >Add to cart</a
+                  >
+                  <div class="flex gap-5 text-white">
+                    <span>Share</span><span>Compare</span><span>Like</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="group relative overflow-hidden bg-product">
+              <a href="product-detail.html"
+                ><img
+                  class="h-[301px] w-full object-cover"
+                  src="images/product/product-02.png"
+                  alt="Leviosa"
+              /></a>
+              <div class="p-4">
+                <h3 class="text-2xl font-semibold text-[#3a3a3a]">Leviosa</h3>
+                <p class="mt-2 font-medium text-[#898989]">
+                  Stylish cafe chair
+                </p>
+                <div class="mt-2 flex items-center gap-4">
+                  <strong class="text-xl font-semibold text-[#3a3a3a]"
+                    >Rp 2.500.000</strong
+                  >
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 hidden place-items-center bg-[#3a3a3a]/70 group-hover:grid"
+              >
+                <div class="grid justify-items-center gap-6">
+                  <a
+                    class="bg-white px-14 py-3 font-semibold text-brand"
+                    href="cart.html"
+                    >Add to cart</a
+                  >
+                  <div class="flex gap-5 text-white">
+                    <span>Share</span><span>Compare</span><span>Like</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="group relative overflow-hidden bg-product">
+              <a href="product-detail.html"
+                ><img
+                  class="h-[301px] w-full object-cover"
+                  src="images/product/product-03.jpg"
+                  alt="Lolito" /></a
+              ><span
+                class="absolute right-6 top-6 grid h-12 w-12 place-items-center rounded-full bg-danger text-white"
+                >-50%</span
+              >
+              <div class="p-4">
+                <h3 class="text-2xl font-semibold text-[#3a3a3a]">Lolito</h3>
+                <p class="mt-2 font-medium text-[#898989]">Luxury big sofa</p>
+                <div class="mt-2 flex items-center gap-4">
+                  <strong class="text-xl font-semibold text-[#3a3a3a]"
+                    >Rp 7.000.000</strong
+                  ><span class="text-[#b0b0b0] line-through"
+                    >Rp 14.000.000</span
+                  >
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 hidden place-items-center bg-[#3a3a3a]/70 group-hover:grid"
+              >
+                <div class="grid justify-items-center gap-6">
+                  <a
+                    class="bg-white px-14 py-3 font-semibold text-brand"
+                    href="cart.html"
+                    >Add to cart</a
+                  >
+                  <div class="flex gap-5 text-white">
+                    <span>Share</span><span>Compare</span><span>Like</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="group relative overflow-hidden bg-product">
+              <a href="product-detail.html"
+                ><img
+                  class="h-[301px] w-full object-cover"
+                  src="images/product/product-04.png"
+                  alt="Respira" /></a
+              ><span
+                class="absolute right-6 top-6 grid h-12 w-12 place-items-center rounded-full bg-teal text-white"
+                >New</span
+              >
+              <div class="p-4">
+                <h3 class="text-2xl font-semibold text-[#3a3a3a]">Respira</h3>
+                <p class="mt-2 font-medium text-[#898989]">
+                  Outdoor bar table and stool
+                </p>
+                <div class="mt-2 flex items-center gap-4">
+                  <strong class="text-xl font-semibold text-[#3a3a3a]"
+                    >Rp 500.000</strong
+                  >
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 hidden place-items-center bg-[#3a3a3a]/70 group-hover:grid"
+              >
+                <div class="grid justify-items-center gap-6">
+                  <a
+                    class="bg-white px-14 py-3 font-semibold text-brand"
+                    href="cart.html"
+                    >Add to cart</a
+                  >
+                  <div class="flex gap-5 text-white">
+                    <span>Share</span><span>Compare</span><span>Like</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="mt-11 text-center">
+            <a
+              class="inline-flex border border-brand px-[74px] py-3 font-semibold text-brand"
+              href="shop.html"
+              >Show More</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="border-t border-[#d9d9d9] bg-white pt-12">
+      <div
+        class="mx-auto grid w-[min(1240px,calc(100%-32px))] gap-10 pb-12 lg:grid-cols-[2fr_1fr_1fr_2fr]"
+      >
+        <div>
+          <h2 class="mb-12 text-2xl font-bold">Furniro.</h2>
+          <p class="max-w-[285px] text-muted">
+            400 University Drive Suite 200 Coral Gables, FL 33134 USA
+          </p>
+        </div>
+        <div>
+          <h3 class="mb-10 text-muted">Links</h3>
+          <div class="grid gap-9 font-medium">
+            <a href="index.html">Home</a><a href="shop.html">Shop</a
+            ><a href="about.html">About</a><a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-10 text-muted">Help</h3>
+          <div class="grid gap-9 font-medium">
+            <a href="#">Payment Options</a><a href="#">Returns</a
+            ><a href="#">Privacy Policies</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-10 text-muted">Newsletter</h3>
+          <form class="flex gap-3">
+            <input
+              class="min-w-0 flex-1 border-b border-black py-1 text-sm outline-none"
+              placeholder="Enter Your Email Address"
+            /><button
+              class="border-b border-black py-1 text-sm font-medium uppercase"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="mx-auto w-[min(1240px,calc(100%-32px))] border-t border-[#d9d9d9] py-9 text-sm"
+      >
+        2026 Furniro. All rights reserved
+      </div>
+    </footer>
+  </body>
+</html>
