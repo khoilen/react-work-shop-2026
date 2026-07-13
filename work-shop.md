@@ -4,26 +4,23 @@
 
 ## About
 
-### What you'll learn
-
 Modern React development is much more than writing components.
 
 In this workshop, we'll explore:
 
 - The modern React ecosystem
-- Popular libraries and the problems they solve
 - How to structure a scalable React application
 - Common mistakes developers make
 - How to avoid those mistakes using modern tools and practices
 
-### Prerequisites
+## Prerequisites
 
 Participants should be familiar with:
 
 - JavaScript (ES6+)
 - React fundamentals
 
-### Modern React Ecosystem
+## Modern React Ecosystem
 
 React focuses on building user interfaces.
 
@@ -47,7 +44,7 @@ We'll briefly introduce the most commonly used libraries and discuss:
 | UI Components | shadcn/ui, MUI                |
 | Testing       | Vitest, React Testing Library |
 
-### Recommended Project Structure
+## Recommended Project Structure
 
 We'll discuss how to organize React applications as they grow.
 
@@ -101,7 +98,7 @@ src/
 `-- main.tsx
 ```
 
-#### What each folder is for
+### What each folder is for
 
 | Folder        | Purpose                                                          | Example content                                     |
 | ------------- | ---------------------------------------------------------------- | --------------------------------------------------- |
@@ -116,7 +113,7 @@ src/
 | `types/`      | Shared TypeScript types used across the application              | API response types, common pagination types         |
 | `utils/`      | Pure helper functions with no React or browser-specific behavior | currency formatter, string helpers, sorting helpers |
 
-#### Feature folder pattern
+### Feature folder pattern
 
 A feature should contain the code needed to support one business area.
 
