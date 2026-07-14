@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Copilot Workflow"
+  short_description: "Repo rules for Copilot and Codex agents"
+  default_prompt: "Use $github-copilot-workflow to make a repository change following the React Workshop conventions."

@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "pnpm typecheck"
+    "test": "vitest run --config vitest.config.ts"
   },
   "peerDependencies": {
     "react": "catalog:",

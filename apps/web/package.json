@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "preview": "vite preview",
-    "test": "pnpm typecheck"
+    "test": "vitest run --config vitest.config.ts"
   },
   "dependencies": {
     "@react-workshop/http-client": "workspace:*",

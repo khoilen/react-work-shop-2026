@@ -13,16 +13,18 @@
     "lint": "turbo lint",
     "typecheck": "turbo typecheck",
     "storybook": "pnpm --filter @react-workshop/ui storybook",
-    "test": "turbo test",
-    "figma:assets": "node scripts/download-figma-assets.mjs",
-    "figma:regroup": "node scripts/regroup-figma-assets.mjs",
-    "mock:generate": "node scripts/generate-dummyjson-mocks.mjs"
+    "test": "turbo test"
   },
   "devDependencies": {
     "@react-workshop/eslint-config": "workspace:*",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@testing-library/user-event": "catalog:",
     "eslint": "catalog:",
+    "jsdom": "catalog:",
     "turbo": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
