@@ -116,3 +116,40 @@ pnpm dev
   }
 }
 ```
+
+## Passing Criteria
+
+### Functional
+
+- Product listing page
+- Product details page
+- Product search
+- Shopping cart
+- Add product to cart
+- Update product quantity
+- Remove product from cart
+- Checkout form
+- Contact form
+- Loading states
+- Empty states
+- Error states
+
+### UI
+
+- At least **70%** visual similarity with the Figma design
+- Responsive on desktop and mobile
+
+### Code Quality
+
+The following commands must pass:
+
+```bash
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
+```
+
+### Testing
+
+- Minimum **70%** unit test coverage
