@@ -248,6 +248,8 @@ pnpm build
 
 ``
 
+## Mistake 6: Project without rule linting
+
 ### Best Practices
 
 We'll conclude with several practical guidelines that apply to almost every React project.
