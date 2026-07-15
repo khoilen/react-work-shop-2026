@@ -37,11 +37,11 @@ We'll briefly introduce the most commonly used libraries and discuss:
 | Build Tool    | Vite                          |
 | Routing       | React Router                  |
 | Server State  | TanStack Query                |
-| Client State  | Zustand                       |
+| Client State  | Zustand, Redux                |
 | Forms         | React Hook Form               |
 | Validation    | Zod                           |
 | Styling       | Tailwind CSS                  |
-| UI Components | shadcn/ui, MUI                |
+| UI Components | shadcn/ui, MUI,  antd         |
 | Testing       | Vitest, React Testing Library |
 
 ## Recommended Project Structure
@@ -70,24 +70,17 @@ src/
 |   |-- router.tsx
 |   |-- providers.tsx
 |   `-- config.ts
+|-- layout/
 |-- components/
-|   |-- ui/
-|   `-- layout/
 |-- features/
 |   |-- products/
 |   |   |-- api/
 |   |   |-- components/
 |   |   |-- hooks/
-|   |   |-- schemas/
-|   |   |-- types.ts
-|   |   `-- index.ts
 |   `-- cart/
 |       |-- api/
 |       |-- components/
 |       |-- hooks/
-|       |-- store.ts
-|       |-- types.ts
-|       `-- index.ts
 |-- hooks/
 |-- lib/
 |-- services/
@@ -95,7 +88,7 @@ src/
 |-- styles/
 |-- types/
 |-- utils/
-`-- main.tsx
+`-- index.tsx
 ```
 
 ### What each folder is for
@@ -138,26 +131,6 @@ features/products/
 This keeps product-related API calls, UI, hooks, validation, and types close together.
 
 When a developer needs to change the product page, they know where to start.
-
-## What should be shared?
-
-Move code to a shared folder only when it is reused by more than one feature.
-
-Good shared code:
-
-- Generic UI components such as `Button`, `Input`, `Card`, and `Modal`
-- Reusable hooks such as `useDebounce` or `useClickOutside`
-- Pure utilities such as `formatCurrency` or `sortByDate`
-- Application setup such as router, providers, and query client configuration
-- Business ui logic  that is reused across multiple features
-
-Keep code inside a feature when it only belongs to that feature.
-
-Examples:
-
-- `ProductCard` should stay in `features/products/components/`
-- `CartSummary` should stay in `features/cart/components/`
-- `CheckoutFormSchema` should stay in `features/checkout/schemas/`
 
 ## Common React Mistakes
 
