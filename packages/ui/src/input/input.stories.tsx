@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Field, FieldError, Input, Label } from "./input";
 import "../styles.css";
+import { Field, FieldError, Input, Label } from "./input";
 
 const meta = {
   title: "Components/Input",
-  component: Input
+  component: Input,
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -17,7 +17,7 @@ export const Default: Story = {
       <Label htmlFor="email">Email</Label>
       <Input id="email" placeholder="name@example.com" />
     </Field>
-  )
+  ),
 };
 
 export const Invalid: Story = {
@@ -27,5 +27,5 @@ export const Invalid: Story = {
       <Input id="invalid-email" isInvalid placeholder="name@example.com" />
       <FieldError>Enter a valid email address.</FieldError>
     </Field>
-  )
+  ),
 };

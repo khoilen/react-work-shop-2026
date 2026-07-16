@@ -1,6 +1,6 @@
 # Work React 2026
 
-> Building modern React applications with the right architecture, tools, and best practices.
+- Building modern React applications with the right architecture, tools, and best practices.
 
 ## About
 
@@ -32,17 +32,17 @@ We'll briefly introduce the most commonly used libraries and discuss:
 - When to use them
 - Common alternatives
 
-| Category      | Popular Libraries             |
-| ------------- | ----------------------------- |
-| Build Tool    | Vite                          |
-| Routing       | React Router                  |
-| Server State  | TanStack Query                |
-| Client State  | Zustand, Redux                |
-| Forms         | React Hook Form               |
-| Validation    | Zod                           |
-| Styling       | Tailwind CSS                  |
-| UI Components | shadcn/ui, MUI,  antd         |
-| Testing       | Vitest, React Testing Library |
+| Category      | Popular Libraries                |
+| ------------- | ---------------------------------|
+| Build Tool    | Vite,                            |
+| Routing       | React Router                     |
+| Handle with http  | TanStack Query, Axios            |
+| Client State      | Zustand, Redux                   |
+| Forms         | React Hook Form, form milk       |
+| Validation    | Zod (options)                    |
+| Styling       | Tailwind CSS, Boostrap, Material |
+| UI Components | shadcn/ui, MUI,  antd            |
+| Testing       | Vitest, React Testing Library    |
 
 ## Recommended Project Structure
 
@@ -65,8 +65,8 @@ Recommended structure:
 
 ```txt
 src/
-|-- app/
-|   |-- app.tsx
+|-- page/
+|   |-- page-1.tsx
 |   |-- router.tsx
 |   |-- providers.tsx
 |   `-- config.ts
@@ -77,10 +77,12 @@ src/
 |   |   |-- api/
 |   |   |-- components/
 |   |   |-- hooks/
-|   `-- cart/
+|   |   |-- stores/
+|   -- cart/
 |       |-- api/
 |       |-- components/
 |       |-- hooks/
+|       |-- stores/
 |-- hooks/
 |-- lib/
 |-- services/
@@ -191,7 +193,6 @@ Topics
 Solution
 
 - React Hook Form
-- Zod
 
 Key takeaway
 
@@ -215,9 +216,6 @@ Refactor into:
 
 - Components
 - Custom Hooks
-- API layer
-- Types
-- Validation schema
 
 Key takeaway
 
@@ -245,10 +243,11 @@ pnpm typecheck
 pnpm lint
 pnpm test
 pnpm build
-
 ``
 
-## Mistake 6: Project without rule linting
+## Mistake 6: Project without rule codding convention
+
+## Mistake 7: Design component not flexible
 
 ### Best Practices
 

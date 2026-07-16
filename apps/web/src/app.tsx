@@ -4,7 +4,7 @@ import {
   Card,
   CardDescription,
   CardHeader,
-  CardTitle
+  CardTitle,
 } from "@react-workshop/ui/card";
 import { Field, FieldError, Input, Label } from "@react-workshop/ui/input";
 import { useMutation, useQuery } from "@tanstack/react-query";
@@ -19,21 +19,21 @@ type ContactFormValues = {
 export function App() {
   const todosQuery = useQuery({
     queryKey: ["todos"],
-    queryFn: getTodos
+    queryFn: getTodos,
   });
 
   const form = useForm<ContactFormValues>({
     defaultValues: {
       name: "",
-      email: ""
-    }
+      email: "",
+    },
   });
 
   const contactMutation = useMutation({
     mutationFn: async (values: ContactFormValues) => {
       await new Promise((resolve) => window.setTimeout(resolve, 600));
       return values;
-    }
+    },
   });
 
   return (
@@ -43,17 +43,21 @@ export function App() {
           <p className="text-sm font-medium uppercase tracking-wide text-zinc-500">
             React Workshop
           </p>
-          <h1 className="text-3xl font-semibold text-zinc-950">Vite monorepo starter</h1>
+          <h1 className="text-3xl font-semibold text-zinc-950">
+            Vite monorepo starter
+          </h1>
           <p className="max-w-xl text-base leading-7 text-zinc-600">
-            React 19, TanStack Query, React Hook Form, Axios, Tailwind, Storybook, and shared
-            workspace packages.
+            React 19, TanStack Query, React Hook Form, Axios, Tailwind,
+            Storybook, and shared workspace packages.
           </p>
         </div>
 
         <Card>
           <CardHeader>
             <CardTitle>Axios query</CardTitle>
-            <CardDescription>Loaded through @react-workshop/http-client.</CardDescription>
+            <CardDescription>
+              Loaded through @react-workshop/http-client.
+            </CardDescription>
           </CardHeader>
           <QueryState
             error={todosQuery.error}
@@ -78,12 +82,16 @@ export function App() {
       <Card className="self-start">
         <CardHeader>
           <CardTitle>React Hook Form</CardTitle>
-          <CardDescription>Form fields are shared UI components from the monorepo.</CardDescription>
+          <CardDescription>
+            Form fields are shared UI components from the monorepo.
+          </CardDescription>
         </CardHeader>
 
         <form
           className="grid gap-4"
-          onSubmit={form.handleSubmit((values) => contactMutation.mutate(values))}
+          onSubmit={form.handleSubmit((values) =>
+            contactMutation.mutate(values),
+          )}
         >
           <Field>
             <Label htmlFor="name">Name</Label>
@@ -95,8 +103,8 @@ export function App() {
                 required: "Name is required",
                 minLength: {
                   value: 2,
-                  message: "Name must be at least 2 characters"
-                }
+                  message: "Name must be at least 2 characters",
+                },
               })}
             />
             <FieldError>{form.formState.errors.name?.message}</FieldError>
@@ -113,8 +121,8 @@ export function App() {
                 required: "Email is required",
                 pattern: {
                   value: /^\S+@\S+\.\S+$/,
-                  message: "Enter a valid email address"
-                }
+                  message: "Enter a valid email address",
+                },
               })}
             />
             <FieldError>{form.formState.errors.email?.message}</FieldError>
@@ -142,7 +150,7 @@ export function App() {
 function QueryState({
   error,
   isError,
-  isLoading
+  isLoading,
 }: {
   error: Error | null;
   isError: boolean;
@@ -158,7 +166,11 @@ function QueryState({
         ? `Request failed with status ${error.status}.`
         : "Unable to load todos.";
 
-    return <p className="mb-4 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">{message}</p>;
+    return (
+      <p className="mb-4 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">
+        {message}
+      </p>
+    );
   }
 
   return null;

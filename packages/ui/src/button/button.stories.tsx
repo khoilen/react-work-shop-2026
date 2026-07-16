@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Button } from "./button";
 import "../styles.css";
+import { Button } from "./button";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -12,11 +12,11 @@ const meta: Meta<typeof Button> = {
           <Story />
         </div>
       </div>
-    )
+    ),
   ],
   args: {
-    children: "Add To Cart"
-  }
+    children: "Add To Cart",
+  },
 };
 
 export default meta;
@@ -28,23 +28,23 @@ export const Primary: Story = {};
 export const Secondary: Story = {
   args: {
     variant: "secondary",
-    children: "View Details"
-  }
+    children: "View Details",
+  },
 };
 
 export const Ghost: Story = {
   args: {
     variant: "ghost",
-    children: "Learn More"
-  }
+    children: "Learn More",
+  },
 };
 
 export const ProductDetailAction: Story = {
   args: {
     variant: "outline",
     size: "lg",
-    children: "Add To Cart"
-  }
+    children: "Add To Cart",
+  },
 };
 
 export const ProductDetailPair: Story = {
@@ -57,26 +57,26 @@ export const ProductDetailPair: Story = {
         + Compare
       </Button>
     </div>
-  )
+  ),
 };
 
 export const Loading: Story = {
   args: {
     isLoading: true,
-    children: "Submitting"
-  }
+    children: "Submitting",
+  },
 };
 
 export const Large: Story = {
   args: {
     size: "lg",
-    children: "Shop Now"
-  }
+    children: "Shop Now",
+  },
 };
 
 export const Danger: Story = {
   args: {
     variant: "danger",
-    children: "Delete"
-  }
+    children: "Delete",
+  },
 };

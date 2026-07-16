@@ -9,13 +9,13 @@ export type Todo = {
 
 export const api = createHttpClient({
   baseURL: "https://jsonplaceholder.typicode.com",
-  timeout: 10_000
+  timeout: 10_000,
 });
 
 export function getTodos() {
   return api.get<Todo[]>("/todos", {
     params: {
-      _limit: 5
-    }
+      _limit: 5,
+    },
   });
 }
