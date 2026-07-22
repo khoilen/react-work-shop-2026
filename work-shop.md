@@ -2,14 +2,7 @@
 
 - Building modern React applications with the right architecture, tools, and best practices.
 
-## Prerequisites
-
-Participants should be familiar with:
-
-- JavaScript (ES6+)
-- React fundamentals
-
-## About
+## Agenda
 
 Modern React development is much more than writing components.
 
@@ -19,6 +12,13 @@ In this workshop, we'll explore:
 - How to structure a scalable React application
 - Common mistakes developers make
 - How to avoid those mistakes using modern tools and practices
+
+## Prerequisites
+
+Participants should be familiar with:
+
+- JavaScript (ES6+)
+- React fundamentals
 
 ## Modern React Ecosystem
 
@@ -268,13 +268,6 @@ The parent decides what to render while the component stays reusable.
 - Accept data through props
 - Use render props or `children` for extensibility
 - Build reusable UI building blocks
-
-## Design Principles
-
-- Single Responsibility Principle (SRP)
-- Composition over Inheritance
-- Reusable Building Blocks
-- Separation of Concerns
 
 ## Mistake 5 — Components Doing Too Much
 
