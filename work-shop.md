@@ -32,17 +32,17 @@ We'll briefly introduce the most commonly used libraries and discuss:
 - When to use them
 - Common alternatives
 
-| Category      | Popular Libraries                |
-| ------------- | ---------------------------------|
-| Build Tool    | Vite,                            |
-| Routing       | React Router                     |
+| Category          | Popular Libraries                |
+| ----------------- | ---------------------------------|
+| Build Tool        | Vite, turbo, nx                  |
+| Routing           | React Router                     |
 | Handle with http  | TanStack Query, Axios            |
 | Client State      | Zustand, Redux                   |
-| Forms         | React Hook Form, form milk       |
-| Validation    | Zod (options)                    |
-| Styling       | Tailwind CSS, Boostrap, Material |
-| UI Components | shadcn/ui, MUI,  antd            |
-| Testing       | Vitest, React Testing Library    |
+| Forms             | React Hook Form, form milk       |
+| Validation        | Zod (options)                    |
+| Styling           | Tailwind CSS, Boostrap, Material |
+| UI Components     | shadcn/ui, MUI,  antd            |
+| Testing           | Vitest, React Testing Library    |
 
 ## Recommended Project Structure
 
@@ -90,7 +90,6 @@ src/
 |-- styles/
 |-- types/
 |-- utils/
-`-- index.tsx
 ```
 
 ### What each folder is for
@@ -221,7 +220,71 @@ Key takeaway
 
 Each module should have a single responsibility.
 
----
+### ex4
+
+```
+
+import { useEffect, useState } from 'react';
+
+export function ProductList() {
+  const [products, setProducts] = useState([]);
+  const [keyword, setKeyword] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+
+    fetch('/api/products')
+      .then(res => res.json())
+      .then(data => {
+        setProducts(data);
+        setLoading(false);
+      });
+  }, []);
+
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(keyword.toLowerCase())
+  );
+
+  const addToCart = async (product) => {
+    if (product.stock <= 0) {
+      alert('Out of stock');
+      return;
+    }
+
+    await fetch('/api/cart', {
+      method: 'POST',
+      body: JSON.stringify(product),
+    });
+
+    alert('Added to cart');
+  };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  return (
+    <>
+      <input
+        value={keyword}
+        onChange={e => setKeyword(e.target.value)}
+        placeholder="Search..."
+      />
+
+      {filteredProducts.map(product => (
+        <div key={product.id}>
+          <h3>{product.name}</h3>
+
+          <button onClick={() => addToCart(product)}>
+            Add to Cart
+          </button>
+        </div>
+      ))}
+    </>
+  );
+}
+```
 
 ## Mistake 5: Project without linting and typecheck, unittest
 
@@ -245,22 +308,127 @@ pnpm test
 pnpm build
 ``
 
-## Mistake 6: Project without rule codding convention
+## Mistake 6: Project Without Coding Conventions
 
-## Mistake 7: Design component not flexible
+### Why is it a problem?
+
+As a project grows, developers naturally solve similar problems in different ways. Without agreed coding conventions, the codebase becomes inconsistent, making it harder to understand, review, and maintain.
+
+The issue is not individual coding style—it's the lack of consistency across the team.
+
+---
+
+### Common Symptoms
+
+- Different folder structures for similar features
+- Inconsistent file and component naming
+- Multiple approaches to API calls or state management
+- Duplicate utility functions
+- Different testing patterns
+- Repeated discussions during code reviews about formatting instead of logic
+
+---
+
+### Example
+
+Inconsistent Structure
+
+featureA/
+  User.tsx
+
+featureB/
+  components/
+    UserCard.tsx
+
+featureC/
+  ui/
+    Member.tsx
+
+Consistent Structure
+
+```
+features/
+  member/
+    api/
+    components/
+    hooks/
+    types/
+    utils/
+```
+
+## Mistake 7: Designing Components That Aren't Flexible
+
+### Why is it a problem ?
+
+Many components are designed for a single screen or feature. When similar requirements appear elsewhere, developers duplicate the component and make small modifications instead of reusing it.
+
+This creates unnecessary complexity and maintenance overhead.
+
+### Example
+
+❌ Too Many Boolean Props
+
+```tsx
+<MemberCard
+    showHeart
+    showNote
+    showTarget
+    showAward
+    showJourney
+    showWeight
+    showBMI
+/>
+```
+
+The component becomes difficult to understand and increasingly harder to extend.
+
+### ✅ Composition
+
+```tsx
+<MemberCard>
+    <MemberAvatar />
+    <MemberInfo />
+    <MemberStatus />
+    <MemberActions />
+</MemberCard>
+```
+
+or
+
+```tsx
+<MemberCard
+    member={member}
+    rightContent={<AwardBadge />}
+    footer={<TargetStatus />}
+/>
+```
+
+The parent decides what to render while the component stays reusable.
+
+---
+
+### Consequences
+
+- Duplicate components
+- Difficult maintenance
+- Inconsistent UI
+- Small changes affect multiple files
+- Poor scalability
+
+---
 
 ### Best Practices
 
-We'll conclude with several practical guidelines that apply to almost every React project.
+- Prefer composition over configuration
+- Keep components focused on a single responsibility
+- Separate business logic from presentation
+- Accept data through props
+- Use render props or `children` for extensibility
+- Build reusable UI building blocks
 
-Topics include:
+## Design Principles
 
-- Prefer composition over large components
-- Avoid unnecessary state
-- Don't abuse useEffect
-- Server State ≠ Client State
-- Organize by feature
-- Choose libraries based on problems, not popularity
-- Keep components focused and reusable
-
----
+- Single Responsibility Principle (SRP)
+- Composition over Inheritance
+- Reusable Building Blocks
+- Separation of Concerns
