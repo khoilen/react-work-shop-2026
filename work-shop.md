@@ -199,7 +199,84 @@ Forms become easier to build and maintain with dedicated tools.
 
 ---
 
-## Mistake 4 — Components Doing Too Much
+## Mistake 4: Designing Components That Aren't Flexible
+
+### Why is it a problem ?
+
+Many components are designed for a single screen or feature. When similar requirements appear elsewhere, developers duplicate the component and make small modifications instead of reusing it.
+
+This creates unnecessary complexity and maintenance overhead.
+
+### Example
+
+❌ Too Many Boolean Props
+
+```tsx
+<MemberCard
+    showHeart
+    showNote
+    showTarget
+    showAward
+    showJourney
+    showWeight
+    showBMI
+/>
+```
+
+The component becomes difficult to understand and increasingly harder to extend.
+
+### ✅ Composition
+
+```tsx
+<MemberCard>
+    <MemberAvatar />
+    <MemberInfo />
+    <MemberStatus />
+    <MemberActions />
+</MemberCard>
+```
+
+or
+
+```tsx
+<MemberCard
+    member={member}
+    rightContent={<AwardBadge />}
+    footer={<TargetStatus />}
+/>
+```
+
+The parent decides what to render while the component stays reusable.
+
+---
+
+### Consequences
+
+- Duplicate components
+- Difficult maintenance
+- Inconsistent UI
+- Small changes affect multiple files
+- Poor scalability
+
+---
+
+### Best Practices
+
+- Prefer composition over configuration
+- Keep components focused on a single responsibility
+- Separate business logic from presentation
+- Accept data through props
+- Use render props or `children` for extensibility
+- Build reusable UI building blocks
+
+## Design Principles
+
+- Single Responsibility Principle (SRP)
+- Composition over Inheritance
+- Reusable Building Blocks
+- Separation of Concerns
+
+## Mistake 5 — Components Doing Too Much
 
 One component handles:
 
@@ -286,7 +363,7 @@ export function ProductList() {
 }
 ```
 
-## Mistake 5: Project without linting and typecheck, unittest
+## Mistake 6: Project without linting and typecheck, unittest
 
 The project runs, so developers assume it's ready to ship.
 
@@ -308,7 +385,7 @@ pnpm test
 pnpm build
 ``
 
-## Mistake 6: Project Without Coding Conventions
+## Mistake 7: Project Without Coding Conventions
 
 ### Why is it a problem?
 
@@ -355,80 +432,3 @@ features/
     types/
     utils/
 ```
-
-## Mistake 7: Designing Components That Aren't Flexible
-
-### Why is it a problem ?
-
-Many components are designed for a single screen or feature. When similar requirements appear elsewhere, developers duplicate the component and make small modifications instead of reusing it.
-
-This creates unnecessary complexity and maintenance overhead.
-
-### Example
-
-❌ Too Many Boolean Props
-
-```tsx
-<MemberCard
-    showHeart
-    showNote
-    showTarget
-    showAward
-    showJourney
-    showWeight
-    showBMI
-/>
-```
-
-The component becomes difficult to understand and increasingly harder to extend.
-
-### ✅ Composition
-
-```tsx
-<MemberCard>
-    <MemberAvatar />
-    <MemberInfo />
-    <MemberStatus />
-    <MemberActions />
-</MemberCard>
-```
-
-or
-
-```tsx
-<MemberCard
-    member={member}
-    rightContent={<AwardBadge />}
-    footer={<TargetStatus />}
-/>
-```
-
-The parent decides what to render while the component stays reusable.
-
----
-
-### Consequences
-
-- Duplicate components
-- Difficult maintenance
-- Inconsistent UI
-- Small changes affect multiple files
-- Poor scalability
-
----
-
-### Best Practices
-
-- Prefer composition over configuration
-- Keep components focused on a single responsibility
-- Separate business logic from presentation
-- Accept data through props
-- Use render props or `children` for extensibility
-- Build reusable UI building blocks
-
-## Design Principles
-
-- Single Responsibility Principle (SRP)
-- Composition over Inheritance
-- Reusable Building Blocks
-- Separation of Concerns
