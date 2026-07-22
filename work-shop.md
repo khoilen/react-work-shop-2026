@@ -2,6 +2,13 @@
 
 - Building modern React applications with the right architecture, tools, and best practices.
 
+## Prerequisites
+
+Participants should be familiar with:
+
+- JavaScript (ES6+)
+- React fundamentals
+
 ## About
 
 Modern React development is much more than writing components.
@@ -12,13 +19,6 @@ In this workshop, we'll explore:
 - How to structure a scalable React application
 - Common mistakes developers make
 - How to avoid those mistakes using modern tools and practices
-
-## Prerequisites
-
-Participants should be familiar with:
-
-- JavaScript (ES6+)
-- React fundamentals
 
 ## Modern React Ecosystem
 
