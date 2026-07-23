@@ -32,17 +32,18 @@ We'll briefly introduce the most commonly used libraries and discuss:
 - When to use them
 - Common alternatives
 
-| Category          | Popular Libraries                |
-| ----------------- | ---------------------------------|
-| Build Tool        | Vite, turbo, nx                  |
-| Routing           | React Router                     |
-| Handle with http  | TanStack Query, Axios            |
-| Client State      | Zustand, Redux                   |
-| Forms             | React Hook Form, form milk       |
-| Validation        | Zod (options)                    |
-| Styling           | Tailwind CSS, Boostrap, Material |
-| UI Components     | shadcn/ui, MUI,  antd            |
-| Testing           | Vitest, React Testing Library    |
+| Category      | Popular Libraries                    |
+| ------------- | ------------------------------------ |
+| Build Tool    | Vite, Turborepo, Nx                  |
+| Routing       | React Router                         |
+| HTTP Client   | Axios                                |
+| Server State  | TanStack Query                       |
+| Client State  | Zustand, Redux                       |
+| Forms         | React Hook Form, Formik              |
+| Validation    | Zod, Yup                             |
+| Styling       | Tailwind CSS, Bootstrap, Material UI |
+| UI Components | shadcn/ui, Material UI, Ant Design   |
+| Testing       | Vitest, React Testing Library        |
 
 ## Recommended Project Structure
 
@@ -213,13 +214,13 @@ This creates unnecessary complexity and maintenance overhead.
 
 ```tsx
 <MemberCard
-    showHeart
-    showNote
-    showTarget
-    showAward
-    showJourney
-    showWeight
-    showBMI
+  showHeart
+  showNote
+  showTarget
+  showAward
+  showJourney
+  showWeight
+  showBMI
 />
 ```
 
@@ -229,10 +230,10 @@ The component becomes difficult to understand and increasingly harder to extend.
 
 ```tsx
 <MemberCard>
-    <MemberAvatar />
-    <MemberInfo />
-    <MemberStatus />
-    <MemberActions />
+  <MemberAvatar />
+  <MemberInfo />
+  <MemberStatus />
+  <MemberActions />
 </MemberCard>
 ```
 
@@ -240,9 +241,9 @@ or
 
 ```tsx
 <MemberCard
-    member={member}
-    rightContent={<AwardBadge />}
-    footer={<TargetStatus />}
+  member={member}
+  rightContent={<AwardBadge />}
+  footer={<TargetStatus />}
 />
 ```
 
@@ -371,12 +372,10 @@ Examples:
 
 Run these checks before every commit or in CI:
 
-``
-pnpm typecheck
+`pnpm typecheck
 pnpm lint
 pnpm test
-pnpm build
-``
+pnpm build`
 
 ## Mistake 7: Project Without Coding Conventions
 
@@ -404,15 +403,15 @@ The issue is not individual coding style—it's the lack of consistency across t
 Inconsistent Structure
 
 featureA/
-  User.tsx
+User.tsx
 
 featureB/
-  components/
-    UserCard.tsx
+components/
+UserCard.tsx
 
 featureC/
-  ui/
-    Member.tsx
+ui/
+Member.tsx
 
 Consistent Structure
 
